@@ -1,3 +1,4 @@
+rm -rf .repo/local_manifests
 
 # Do repo init for rom that we want to build.
 repo init --depth=1 --no-repo-verify -u https://github.com/AOSPA/manifest -b topaz -g default,-mips,-darwin,-notdefault

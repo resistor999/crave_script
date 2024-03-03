@@ -18,4 +18,4 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 export TZ=Asia/Jakarta
 
 # Let's start build!
-./rom-build.sh citrus -t userdebug
+bash rom-build.sh citrus -t userdebug

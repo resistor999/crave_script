@@ -4,12 +4,11 @@ rm -rf .repo/local_manifests
 repo init -u https://github.com/AOSPA/manifest -b topaz --depth=1 --no-repo-verify -g default,-mips,-darwin,-notdefault
 
 # Do remove here before repo sync.
-rm -rf prebuilts/clang/host/linux-x86
 rm -rf hardware
 rm -rf vendor
 rm -rf system
 rm -rf kernel
-rm -rf out/host
+rm -rf device
 rm -rf packages
 rm -rf prebuilts/clang/host/linux-x86
 
@@ -23,4 +22,4 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --optimiz
 export TZ=Asia/Jakarta
 
 # Let's start build!
-bash rom-build.sh citrus -t userdebug
+bash rom-build.sh citrus -t userdebug -i

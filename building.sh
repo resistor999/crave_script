@@ -1,7 +1,7 @@
 rm -rf .repo/local_manifests
 
 # Do repo init for rom that we want to build.
-repo init -u https://github.com/AOSPA/manifest -b topaz --git-lfs --depth=1 --no-repo-verify
+repo init -u https://github.com/AOSPA/manifest -b topaz --depth=1 --no-repo-verify -g default,-mips,-darwin,-notdefault
 
 # Remove tree before cloning our manifest.
 rm -rf device/xiaomi

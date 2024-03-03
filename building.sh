@@ -27,4 +27,4 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --optimiz
 export TZ=Asia/Jakarta
 
 # Let's start build!
-bash rom-build.sh citrus -t userdebug
+bash rom-build.sh citrus -t userdebug -c

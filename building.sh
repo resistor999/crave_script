@@ -24,7 +24,7 @@ rm -rf hardware/xiaomi
 rm -rf packages/resources/devicesettings
 
 # Do clone here after repo sync.
-git clone https://github.com/Evolution-X/hardware_xiaomi -b udc hardware/xiaomi
+git clone https://github.com/Night-Raids-Reborn/hardware_xiaomi -b udc hardware/xiaomi
 git clone https://github.com/PixelExperience/packages_resources_devicesettings -b fourteen packages/resources/devicesettings
     
 # Define timezone

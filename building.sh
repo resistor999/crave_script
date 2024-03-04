@@ -1,7 +1,7 @@
 rm -rf .repo/local_manifests
 
 # Do repo init for rom that we want to build.
-repo init -u https://github.com/AOSPA/manifest -b topaz --depth=1 --no-repo-verify -g default,-mips,-darwin,-notdefault
+repo init -u https://github.com/bananadroid/android_manifest.git -b 14 --git-lf --depth=1 --no-repo-verify -g default,-mips,-darwin,-notdefault
 
 # Do remove here before repo sync.
 rm -rf hardware
@@ -10,7 +10,6 @@ rm -rf system
 rm -rf kernel
 rm -rf device
 rm -rf packages
-rm -rf out/host
 rm -rf prebuilts/clang/host/linux-x86
 
 # Clone our local manifest.
@@ -23,4 +22,6 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --optimiz
 export TZ=Asia/Jakarta
 
 # Let's start build!
-bash rom-build.sh citrus -t userdebug -i
+. build/envsetup.sh
+lunch banana_citrus-userdebug
+m banana

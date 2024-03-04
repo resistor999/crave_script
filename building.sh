@@ -11,12 +11,21 @@ rm -rf kernel
 rm -rf device
 rm -rf packages
 rm -rf prebuilts/clang/host/linux-x86
+rm -rf out/host
 
 # Clone our local manifest.
-git clone https://github.com/Night-Raids-Reborn/local_manifest --depth 1 -b 13-topaz .repo/local_manifests
+git clone https://github.com/Night-Raids-Reborn/local_manifest --depth 1 -b 14-n .repo/local_manifests
 
 # Let's sync!
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune
+
+# Do remove here after repo sync.
+rm -rf hardware/xiaomi
+rm -rf packages/resources/devicesettings
+
+# Do clone here after repo sync.
+git clone https://github.com/Evolution-X/hardware_xiaomi -b udc hardware/xiaomi
+git clone https://github.com/PixelExperience/packages_resources_devicesettings -b fourteen packages/resources/devicesettings
     
 # Define timezone
 export TZ=Asia/Jakarta

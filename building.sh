@@ -1,7 +1,7 @@
 rm -rf .repo/local_manifests
 
 # Do repo init for rom that we want to build.
-repo init -u https://github.com/bananadroid/android_manifest.git -b 14 --git-lf --depth=1 --no-repo-verify -g default,-mips,-darwin,-notdefault
+repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fourteen --git-lfs --depth=1 --no-repo-verify -g default,-mips,-darwin,-notdefault
 
 # Do remove here before repo sync.
 rm -rf hardware
@@ -14,7 +14,7 @@ rm -rf prebuilts/clang/host/linux-x86
 rm -rf out/host
 
 # Clone our local manifest.
-git clone https://github.com/Night-Raids-Reborn/local_manifest --depth 1 -b 14-n .repo/local_manifests
+git clone https://github.com/Night-Raids-Reborn/local_manifest --depth 1 -b u .repo/local_manifests
 
 # Let's sync!
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune
@@ -32,5 +32,5 @@ export TZ=Asia/Jakarta
 
 # Let's start build!
 . build/envsetup.sh
-lunch banana_citrus-userdebug
-m banana
+lunch aosp_citrus-userdebug
+make bacon

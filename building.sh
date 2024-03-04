@@ -3,16 +3,6 @@ rm -rf .repo/local_manifests
 # Do repo init for rom that we want to build.
 repo init -u https://github.com/AOSPA/manifest -b topaz --depth=1 --no-repo-verify -g default,-mips,-darwin,-notdefault
 
-# Do remove here before repo sync.
-rm -rf hardware
-rm -rf vendor
-rm -rf system
-rm -rf kernel
-rm -rf device
-rm -rf packages
-rm -rf out/host
-rm -rf prebuilts/clang/host/linux-x86
-
 # Clone our local manifest.
 git clone https://github.com/Night-Raids-Reborn/local_manifest --depth 1 -b 13-topaz .repo/local_manifests
 

@@ -35,4 +35,4 @@ export TZ=Asia/Jakarta
 # Let's start build!
 . build/envsetup.sh
 lunch cherish_citrus-userdebug
-m bacon
+mka bacon

@@ -34,5 +34,5 @@ export TZ=Asia/Jakarta
 
 # Let's start build!
 . build/envsetup.sh
-lunch aosp_citrus-userdebug
-make bacon
+lunch blackiron_citrus-userdebug
+mka blackiron

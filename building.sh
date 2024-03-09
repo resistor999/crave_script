@@ -1,7 +1,7 @@
 rm -rf .repo/local_manifests
 
 # Do repo init for rom that we want to build.
-repo init -u https://github.com/ProjectBlaze/manifest -b 14 --git-lfs --depth=1 --no-repo-verify -g default,-mips,-darwin,-notdefault
+repo init -u https://github.com/CherishOS/android_manifest.git -b udc --depth=1 --no-repo-verify -g default,-mips,-darwin,-notdefault
 
 # Do remove here before repo sync.
 rm -rf hardware
@@ -34,5 +34,5 @@ export TZ=Asia/Jakarta
 
 # Let's start build!
 . build/envsetup.sh
-lunch blaze_citrus-userdebug
-make bacon
+lunch cherish_citrus-userdebug
+m bacon

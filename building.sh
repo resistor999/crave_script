@@ -1,7 +1,7 @@
 rm -rf .repo/local_manifests
 
 # Do repo init for rom that we want to build.
-repo init -u https://github.com/Black-Iron-Project/manifest -b u14 --depth=1 --no-repo-verify -g default,-mips,-darwin,-notdefault
+repo init -u https://github.com/ProjectMatrixx/android.git -b 14.0 --git-lfs --depth=1 --no-repo-verify -g default,-mips,-darwin,-notdefault
 
 # Do remove here before repo sync.
 rm -rf hardware
@@ -34,5 +34,5 @@ export TZ=Asia/Jakarta
 
 # Let's start build!
 . build/envsetup.sh
-lunch blackiron_citrus-userdebug
-mka blackiron
+lunch lineage_citrus-userdebug
+m bacon

@@ -25,7 +25,7 @@ rm -rf packages/resources/devicesettings
 rm -rf system/libhidl
 
 # Do clone here after repo sync.
-git clone https://github.com/Evolution-X/hardware_xiaomi -b udc hardware/xiaomi
+git clone https://github.com/Night-Raids-Reborn/hardware_xiaomi -b udc hardware/xiaomi
 git clone https://github.com/PixelExperience/packages_resources_devicesettings -b fourteen packages/resources/devicesettings
 git clone https://github.com/Evolution-X/system_libhidl -b udc system/libhidl
     

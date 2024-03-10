@@ -1,7 +1,7 @@
 rm -rf .repo/local_manifests
 
 # Do repo init for rom that we want to build.
-repo init -u https://github.com/ProjectMatrixx/android.git -b 14.0 --git-lfs --depth=1 --no-repo-verify -g default,-mips,-darwin,-notdefault
+repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs --depth=1 --no-repo-verify -g default,-mips,-darwin,-notdefault
 
 # Do remove here before repo sync.
 rm -rf hardware
@@ -25,7 +25,7 @@ rm -rf packages/resources/devicesettings
 rm -rf system/libhidl
 
 # Do clone here after repo sync.
-git clone https://github.com/Night-Raids-Reborn/hardware_xiaomi -b udc hardware/xiaomi
+git clone https://github.com/Evolution-X/hardware_xiaomi -b udc hardware/xiaomi
 git clone https://github.com/PixelExperience/packages_resources_devicesettings -b fourteen packages/resources/devicesettings
 git clone https://github.com/Evolution-X/system_libhidl -b udc system/libhidl
     
@@ -34,5 +34,5 @@ export TZ=Asia/Jakarta
 
 # Let's start build!
 . build/envsetup.sh
-lunch lineage_citrus-userdebug
-m bacon
+lunch rising_citrus-userdebug
+ascend

@@ -23,10 +23,12 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --optimiz
 # Do remove here after repo sync.
 rm -rf packages/resources/devicesettings
 rm -rf vendor/qcom/opensource/vibrator
+rm -rf vendor/signed
 
 # Do clone here after repo sync.
 git clone https://github.com/PixelExperience/packages_resources_devicesettings -b thirteen packages/resources/devicesettings
 git clone https://github.com/Night-Raids-Reborn/android_vendor_qcom_opensource_vibrator -b thirteen vendor/qcom/opensource/vibrator
+git clone https://github.com/resistor999/vendro_al -b 13 vendor/signed
     
 # Define timezone
 export TZ=Asia/Jakarta

@@ -36,8 +36,3 @@ export TZ=Asia/Jakarta
 . build/envsetup.sh
 lunch bliss_citrus-userdebug
 blissify -v citrus
-
-# Let's start build for lime!
-. build/envsetup.sh
-lunch bliss_lime-userdebug
-blissify -v lime

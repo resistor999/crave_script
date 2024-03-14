@@ -34,4 +34,5 @@ export TZ=Asia/Jakarta
 
 # Let's start build!
 . build/envsetup.sh
-blissify citrus
+lunch bliss_citrus-userdebug
+mka bacon
